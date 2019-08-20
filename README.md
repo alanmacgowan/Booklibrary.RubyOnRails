@@ -1,7 +1,5 @@
 # README
 
-[![Heroku CI Status](https://booklibraryrubyonrails.herokuapp.com/last.svg)]
-
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
