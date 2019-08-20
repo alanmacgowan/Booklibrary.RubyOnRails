@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <h1>Sample Application</h1>
+    <%= link_to 'Books', books_path %> - <%= link_to 'Authors', authors_path %> - <%= link_to 'Publishers', publishers_path %>
+    <hr/>
     <%= yield %>
   </body>
 </html>

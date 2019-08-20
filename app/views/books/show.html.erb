@@ -37,12 +37,12 @@
 
 <p>
   <strong>Publisher:</strong>
-  <%= @book.publisher %>
+  <%= @book.publisher.name %>
 </p>
 
 <p>
   <strong>Author:</strong>
-  <%= @book.author %>
+  <%= @book.author.full_name %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

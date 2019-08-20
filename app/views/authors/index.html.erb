@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Last name</th>
-      <th>First name</th>
+      <th>Name</th>
       <th>Birth date</th>
       <th>Country</th>
       <th>About</th>
@@ -18,8 +17,7 @@
   <tbody>
     <% @authors.each do |author| %>
       <tr>
-        <td><%= author.last_name %></td>
-        <td><%= author.first_name %></td>
+        <td><%= author.full_name %></td>
         <td><%= author.birth_date %></td>
         <td><%= author.country %></td>
         <td><%= author.about %></td>

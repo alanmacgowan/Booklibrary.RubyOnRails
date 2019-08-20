@@ -48,12 +48,16 @@
 
   <div class="field">
     <%= form.label :publisher_id %>
-    <%= form.text_field :publisher_id, id: :book_publisher_id %>
+    <%= collection_select(:book, :publisher_id,
+        Publisher.all, :id, :name, options ={:prompt =>
+        "Select a Publisher"}, :class =>"publisher") %>
   </div>
 
   <div class="field">
     <%= form.label :author_id %>
-    <%= form.text_field :author_id, id: :book_author_id %>
+    <%= collection_select(:book, :author_id,
+        Author.all, :id, :full_name, options ={:prompt =>
+        "Select a Author"}, :class =>"author") %>
   </div>
 
   <div class="actions">
