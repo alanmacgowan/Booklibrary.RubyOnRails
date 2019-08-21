@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BooklibraryRubyonrails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Booklibrary Rubyonrails" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Booklibrary Rubyonrails" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <h1>Sample Application</h1>
-    <%= link_to 'Books', books_path %> - <%= link_to 'Authors', authors_path %> - <%= link_to 'Publishers', publishers_path %>
-    <hr/>
-    <%= yield %>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+        <h1>Sample Ruby On Rails Application</h1>
+            <%= link_to 'Books', books_path %> - <%= link_to 'Authors', authors_path %> - <%= link_to 'Publishers', publishers_path %>
+
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
   </body>
 </html>

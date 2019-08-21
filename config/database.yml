@@ -12,7 +12,7 @@ default: &default
   encoding: unicode
   host: localhost
   username: postgres
-  password: 
+  password: cocoloco
 
 development:
   <<: *default
